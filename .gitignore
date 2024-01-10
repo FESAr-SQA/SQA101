@@ -1,0 +1,37 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore virtual environment files
+.venv/
+venv/
+env/
+ENV/
+
+# Ignore Allure report directories
+allure-report/
+
+# Ignore pytest cache and logs
+.pytest_cache/
+pytest.log
+
+# Ignore Selenium WebDriver binaries
+geckodriver.log
+geckodriver
+chromedriver
+edgedriver
+operadriver
+
+# Ignore Allure results directories
+allure-results/
+
+# Ignore any local configurations (You may need to adjust this based on your specific configuration file)
+config.json
+
+# Ignore editor-specific files
+.vscode/
+.idea/
+
+# Ignore any other generated or user-specific files/directories
+*.log
+.DS_Store
