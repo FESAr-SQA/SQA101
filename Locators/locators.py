@@ -8,3 +8,6 @@ class LoginLocators:
     password = (By.NAME, "password")
     login_button = (By.NAME, "btnLogin")
     reset_button = (By.NAME, "btnReset")
+
+class HomeLocators:
+    welcome_message = (By.CLASS_NAME, "heading3")
