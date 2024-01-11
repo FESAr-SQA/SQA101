@@ -67,3 +67,4 @@ This will automatically discover and run all test cases in the project, leveragi
 Feel free to explore the code and contribute to the SQA101 project. If you encounter any issues or have suggestions, please open an issue on GitHub.
 
 Happy testing! 🚀
+.
