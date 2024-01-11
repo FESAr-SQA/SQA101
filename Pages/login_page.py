@@ -7,3 +7,7 @@ class LoginPage(PageBase):
 
     def write_username(self, username):
         self.driver.find_element(*LoginLocators.username).send_keys(username)
+
+    def write_password(self, password):
+        self.driver.find_element(*LoginLocators.password).send_keys(password)
+

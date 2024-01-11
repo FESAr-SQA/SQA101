@@ -1,4 +1,5 @@
 from Pages.login_page import LoginPage
+import time
 import pytest
 
 
@@ -8,5 +9,6 @@ class TestLogin:
         login = LoginPage(self.driver)
         login.open()
         login.write_username("mngr547360")
-        import time
+        time.sleep(5)
+        login.write_password("YjAnEtU")
         time.sleep(5)
