@@ -16,7 +16,6 @@ class LoginLocators:
 class HomeLocators:
     welcome_message = (By.CLASS_NAME, "heading3")
 
-
 class NewCustomerLocators:
     customer_name_txt = (By.CSS_SELECTOR, "body > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td:nth-child(2) > input[type=text]")
     customer_input_message = (By.ID, "message")
