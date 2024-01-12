@@ -23,3 +23,8 @@ class TestNewCustomer:
         newCustomer.click_on_input("Address")
         newCustomer.verify_message_by_input_name("Customer Name", "Customer name must not be blank")
 
+        newCustomer.click_on_input("City")
+        newCustomer.click_on_input("Address")
+        time.sleep(1)
+        newCustomer.verify_message_by_input_name("City","City Field must be not blank" )
+

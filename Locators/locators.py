@@ -21,3 +21,5 @@ class NewCustomerLocators:
     customer_name_txt = (By.CSS_SELECTOR, "body > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td:nth-child(2) > input[type=text]")
     customer_input_message = (By.ID, "message")
     address_txt = (By.CSS_SELECTOR, "body > table > tbody > tr > td > table > tbody > tr:nth-child(7) > td:nth-child(2) > textarea")
+    city_txt = (By.CSS_SELECTOR, "body > table > tbody > tr > td > table > tbody > tr:nth-child(8) > td:nth-child(2) > input[type=text]")
+    city_input_message =  (By.ID, "message4")

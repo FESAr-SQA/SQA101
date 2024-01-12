@@ -14,7 +14,9 @@ class NewCustomerPage(PageBase):
                 element = self.driver.find_element(*NewCustomerLocators.customer_name_txt)
             elif  input_name == "Address":
                 element = self.driver.find_element(*NewCustomerLocators.address_txt)
-
+            elif input_name == "City":
+                element = self.driver.find_element(*NewCustomerLocators.city_txt)
+            
             element.click()
         except Exception as e:
             print(e)
@@ -25,9 +27,10 @@ class NewCustomerPage(PageBase):
             if input_name == "Customer Name":
                 element = self.driver.find_element(*NewCustomerLocators.customer_input_message)
             elif  input_name == "Address":
-                pass
-            #TODO: needs to implement message on address
-
+                pass #TODO: needs to implement message on address
+            elif input_name == "City":
+                element = self.driver.find_element(*NewCustomerLocators.city_input_message)
+            
             actual_message = element.text
         except Exception as e:
             print(e)
