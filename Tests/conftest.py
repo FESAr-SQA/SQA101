@@ -40,7 +40,7 @@ def setup(request, config):
     before_failed = request.session.testsfailed
     if config["browser"] == "firefox":
         driver.maximize_window()
-    time.sleep(5)
+    time.sleep(2.5)
     yield
     if request.session.testsfailed != before_failed:
         pass
