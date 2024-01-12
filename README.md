@@ -18,30 +18,30 @@ It's a good practice to create a virtual environment to manage project-specific 
 
 ```bash
 # Create a virtual environment
-python -m venv venv
+python -m venv .venv
 
 # Activate virtual environment
-.\venv\Scripts\activate
+.\.venv\Scripts\activate
 ```
 
 ### For PowerShell:
 
 ```bash
 # Create a virtual environment
-python -m venv venv
+python -m venv .venv
 
 # Activate virtual environment
-.\venv\Scripts\Activate.ps1
+.\.venv\Scripts\Activate.ps1
 ```
 
 ### For Linux/Mac:
 
 ```bash
 # Create a virtual environment
-python3 -m venv venv
+python3 -m venv .venv
 
 # Activate virtual environment
-source venv/bin/activate
+source .venv/bin/activate
 ```
 
 ## Install Dependencies
