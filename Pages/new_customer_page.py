@@ -1,5 +1,6 @@
 from Base.page_base import PageBase
 from Locators.locators import NewCustomerLocators
+from selenium.webdriver.common.by import By
 import time
 
 class NewCustomerPage(PageBase):
@@ -13,7 +14,7 @@ class NewCustomerPage(PageBase):
                 element = self.driver.find_element(*NewCustomerLocators.customer_name_txt)
             elif  input_name == "Address":
                 element = self.driver.find_element(*NewCustomerLocators.address_txt)
-            
+
             element.click()
         except Exception as e:
             print(e)
@@ -26,10 +27,9 @@ class NewCustomerPage(PageBase):
             elif  input_name == "Address":
                 pass
             #TODO: needs to implement message on address
-            
+
             actual_message = element.text
         except Exception as e:
             print(e)
 
         assert actual_message == expected_message, f'El mensaje en el campo {input_name} es {actual_message}. Se esperaba {expected_message}'
-        

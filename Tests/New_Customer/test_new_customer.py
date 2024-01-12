@@ -19,7 +19,6 @@ class TestNewCustomer:
         common.click_on_button_menu("New Customer")
 
         newCustomer = NewCustomerPage(self.driver)
-
         newCustomer.click_on_input("Customer Name")
         newCustomer.click_on_input("Address")
         newCustomer.verify_message_by_input_name("Customer Name", "Customer name must not be blank")
