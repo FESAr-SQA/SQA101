@@ -26,7 +26,8 @@ class DriverFactory:
             if config["headless_mode"] is True:
                 options.headless = True
             driver = WebDriverExtended(
-                webdriver.Firefox(executable_path=GeckoDriverManager().install(), options=options),
+                #webdriver.Firefox(executable_path=GeckoDriverManager().install(), options=options),
+                webdriver.Firefox(options=options),
                 WebDriverListener(), config
             )
             return driver

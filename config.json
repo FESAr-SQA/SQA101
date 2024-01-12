@@ -1,6 +1,6 @@
 {
-    "browser": "chrome",
-    "headless_mode": false,
-    "base_url": "https://demo.guru99.com/V1/index.php",
-    "timeout": 10
+  "browser": "firefox",
+  "headless_mode": false,
+  "base_url": "https://demo.guru99.com/V1/index.php",
+  "timeout": 10
 }
