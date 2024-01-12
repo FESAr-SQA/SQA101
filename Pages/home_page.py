@@ -1,5 +1,5 @@
 from Base.page_base import PageBase
-from Locators.locators import HomeLocators
+from Locators.locators import HomeLocators, NewCustomerLocators
 import time
 
 class HomePage(PageBase):
@@ -12,6 +12,14 @@ class HomePage(PageBase):
     def verify_welcome_message(self, expected_message):
         try:
             actual_message = self.driver.find_element(*HomeLocators.welcome_message).text
+        except Exception as e:
+            print(e)
+        #assert actual_message == expected_message, "El mesnaje de bienvenida no es el correcto."
+        assert actual_message == expected_message, f'El mensaje de bienvenida es "{actual_message}". Se esperaba "{expected_message}"'
+
+    def verify_new_costumer(self, expected_message):
+        try:
+            actual_message = self.driver.find_element(*NewCustomerLocators.customer_name_txt).text
         except Exception as e:
             print(e)
         #assert actual_message == expected_message, "El mesnaje de bienvenida no es el correcto."

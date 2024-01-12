@@ -24,8 +24,7 @@ class NewCustomerPage(PageBase):
             if input_name == "Customer Name":
                 element = self.driver.find_element(*NewCustomerLocators.customer_input_message)
             elif  input_name == "Address":
-                pass
-            #TODO: needs to implement message on address
+                element = self.driver.find_element(*NewCustomerLocators.address_txt)
             
             actual_message = element.text
         except Exception as e:

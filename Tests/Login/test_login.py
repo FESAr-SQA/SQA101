@@ -6,7 +6,8 @@ import time
 @pytest.mark.usefixtures("setup")
 class TestLogin:
 
-    @pytest.mark.parametrize("expected_message", [("Welcome To Manager's Page of GTPL Bank"), ("BIENVENIDO"), ("ñksadjfañsldkjfalsdkfj")])
+    #@pytest.mark.parametrize("expected_message", [("Welcome To Manager's Page of GTPL Bank"), ("BIENVENIDO"), ("ñksadjfañsldkjfalsdkfj")])
+    @pytest.mark.parametrize("expected_message", [("Welcome To Manager's Page of GTPL Bank")])
     def test_login_positive(self, expected_message):
         login = LoginPage(self.driver)
         login.open()
