@@ -20,3 +20,8 @@ class NewCustomerLocators:
     customer_name_txt = (By.CSS_SELECTOR, "body > table > tbody > tr > td > table > tbody > tr:nth-child(4) > td:nth-child(2) > input[type=text]")
     customer_input_message = (By.ID, "message")
     address_txt = (By.CSS_SELECTOR, "body > table > tbody > tr > td > table > tbody > tr:nth-child(7) > td:nth-child(2) > textarea")
+    city_input_message = (By.XPATH, "/html/body/table/tbody/tr/td/table/tbody/tr[8]/td[2]/input")
+    state_input_message = (By.XPATH, "/html/body/table/tbody/tr/td/table/tbody/tr[9]/td[2]/input")
+    pin_input_message = (By.XPATH, "/html/body/table/tbody/tr/td/table/tbody/tr[10]/td[2]/input")
+    phone_number_input_message = (By.XPATH, "/html/body/table/tbody/tr/td/table/tbody/tr[11]/td[2]/input")
+    email_input_message = (By.XPATH, "/html/body/table/tbody/tr/td/table/tbody/tr[12]/td[2]/input")

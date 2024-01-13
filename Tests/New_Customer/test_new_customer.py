@@ -1,5 +1,4 @@
 from Pages.login_page import LoginPage
-from Pages.home_page import HomePage
 from Pages.common_page import CommonPage
 from Pages.new_customer_page import NewCustomerPage
 import pytest
@@ -8,7 +7,8 @@ import time
 @pytest.mark.usefixtures("setup")
 class TestNewCustomer:
 
-    def test_new_customer_input_message(self):
+    @pytest.mark.parametrize("expected message", [("Customer Name,", "Customer name must not be blank"), ("City", "Customer name must not be blank"), ("State", "Customer name must not be blank"), ("PIN", "Customer name must not be blank"), ("phone_number", "Customer name must not be blank"), ("email", "Customer name must not be blank")])
+    def test_new_customer_input_message(self, expected_message):
         login = LoginPage(self.driver)
         login.open()
         login.write_username("mngr547360")
@@ -20,6 +20,15 @@ class TestNewCustomer:
 
         newCustomer = NewCustomerPage(self.driver)
         newCustomer.click_on_input("Customer Name")
+        newCustomer.click_on_input("Customer Name")
+        newCustomer.click_on_input("Customer Name")
+        newCustomer.click_on_input("Customer Name")
+        newCustomer.click_on_input("Customer Name")
+        newCustomer.click_on_input("Customer Name")
+        newCustomer.click_on_input("Customer Name")
+        newCustomer.click_on_input("Customer Name")
+        newCustomer.click_on_input("Customer Name")
+        newCustomer.click_on_input("Customer Name")
         newCustomer.click_on_input("Address")
-        newCustomer.verify_message_by_input_name("Customer Name", "Customer name must not be blank")
+        newCustomer.verify_message_by_input_name(*expected_message)
 
