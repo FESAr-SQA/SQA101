@@ -8,7 +8,7 @@ import time
 class TestNewCustomer:
 
     # @pytest.mark.parametrize("expected_message", [("Customer Name,", "Customer name must not be blank")])
-    @pytest.mark.parametrize("expected_message", [("Customer Name,", "Customer name must not be blank"), ("City", "City Field must not be blank"), ("State", "State must not be blank"), ("PIN", "PIN Code must not be blank"), ("Phone_number", "Telephone no must not be blank"), ("Email", "Email-ID must not be blank")])
+    @pytest.mark.parametrize("expected_message", [("Customer Name", "Customer name must not be blank"), ("City", "City Field must be not blank"), ("State", "State must not be blank"), ("PIN", "PIN Code must not be blank"), ("Phone_number", "Telephone no must not be blank"), ("Email", "Email-ID must not be blank")])
     def test_new_customer_input_message(self, expected_message):
         login = LoginPage(self.driver)
         login.open()
