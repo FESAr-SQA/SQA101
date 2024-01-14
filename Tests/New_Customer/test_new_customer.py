@@ -7,7 +7,8 @@ import time
 @pytest.mark.usefixtures("setup")
 class TestNewCustomer:
 
-    @pytest.mark.parametrize("expected message", [("Customer Name,", "Customer name must not be blank"), ("City", "Customer name must not be blank"), ("State", "Customer name must not be blank"), ("PIN", "Customer name must not be blank"), ("phone_number", "Customer name must not be blank"), ("email", "Customer name must not be blank")])
+    # @pytest.mark.parametrize("expected_message", [("Customer Name,", "Customer name must not be blank")])
+    @pytest.mark.parametrize("expected_message", [("Customer Name,", "Customer name must not be blank"), ("City", "City Field must not be blank"), ("State", "State must not be blank"), ("PIN", "PIN Code must not be blank"), ("Phone_number", "Telephone no must not be blank"), ("Email", "Email-ID must not be blank")])
     def test_new_customer_input_message(self, expected_message):
         login = LoginPage(self.driver)
         login.open()
@@ -20,15 +21,17 @@ class TestNewCustomer:
 
         newCustomer = NewCustomerPage(self.driver)
         newCustomer.click_on_input("Customer Name")
-        newCustomer.click_on_input("Customer Name")
-        newCustomer.click_on_input("Customer Name")
-        newCustomer.click_on_input("Customer Name")
-        newCustomer.click_on_input("Customer Name")
-        newCustomer.click_on_input("Customer Name")
-        newCustomer.click_on_input("Customer Name")
-        newCustomer.click_on_input("Customer Name")
-        newCustomer.click_on_input("Customer Name")
-        newCustomer.click_on_input("Customer Name")
+        time.sleep(2)
+        newCustomer.click_on_input("City")
+        time.sleep(2)
+        newCustomer.click_on_input("State")
+        time.sleep(2)
+        newCustomer.click_on_input("PIN")
+        time.sleep(2)
+        newCustomer.click_on_input("Phone_number")
+        time.sleep(2)
+        newCustomer.click_on_input("Email")
+        time.sleep(2)
         newCustomer.click_on_input("Address")
         newCustomer.verify_message_by_input_name(*expected_message)
 
