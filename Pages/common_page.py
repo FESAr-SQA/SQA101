@@ -9,7 +9,7 @@ class CommonPage(PageBase):
     def click_on_button_menu(self, menu_name):
         try:
             formated_locator = CommonLocators.button_xpath.format(menu_name)
-            locator = (By.PATH, formated_locator)
+            locator = (By.XPATH, formated_locator)
             self.driver.find_element(*locator).click()
         except Exception as e:
             print(e)

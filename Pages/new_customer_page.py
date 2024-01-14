@@ -15,15 +15,15 @@ class NewCustomerPage(PageBase):
             elif  input_name == "Address":
                 element = self.driver.find_element(*NewCustomerLocators.address_txt)
             elif  input_name == "City":
-                element = self.driver.find_element(*NewCustomerLocators.city_input_message)
+                element = self.driver.find_element(*NewCustomerLocators.city_name_txt)
             elif  input_name == "State":
-                element = self.driver.find_element(*NewCustomerLocators.state_input_message)
+                element = self.driver.find_element(*NewCustomerLocators.state_name_txt)
             elif  input_name == "PIN":
-                element = self.driver.find_element(*NewCustomerLocators.pin_input_message)
-            elif  input_name == "phone_number":
-                element = self.driver.find_element(*NewCustomerLocators.phone_number_input_message)
-            elif  input_name == "email":
-                element = self.driver.find_element(*NewCustomerLocators.email_input_message)
+                element = self.driver.find_element(*NewCustomerLocators.pin_name_txt)
+            elif  input_name == "Phone_number":
+                element = self.driver.find_element(*NewCustomerLocators.phone_name_txt)
+            elif  input_name == "Email":
+                element = self.driver.find_element(*NewCustomerLocators.email_name_txt)
 
             element.click()
         except Exception as e:
@@ -32,18 +32,19 @@ class NewCustomerPage(PageBase):
     def verify_message_by_input_name(self, input_name, expected_message):
         try:
             element = ""
+            actual_message = ""
             if input_name == "Customer Name":
                 element = self.driver.find_element(*NewCustomerLocators.customer_input_message)
             elif  input_name == "City":
-                element = self.driver.find_element(*NewCustomerLocators.customer_input_message)
+                element = self.driver.find_element(*NewCustomerLocators.city_input_message)
             elif  input_name == "State":
-                element = self.driver.find_element(*NewCustomerLocators.customer_input_message)
+                element = self.driver.find_element(*NewCustomerLocators.state_input_message)
             elif  input_name == "PIN":
-                element = self.driver.find_element(*NewCustomerLocators.customer_input_message)
-            elif  input_name == "phone_number":
-                element = self.driver.find_element(*NewCustomerLocators.customer_input_message)
-            elif  input_name == "email":
-                element = self.driver.find_element(*NewCustomerLocators.customer_input_message)
+                element = self.driver.find_element(*NewCustomerLocators.pin_input_message)
+            elif  input_name == "Phone_number":
+                element = self.driver.find_element(*NewCustomerLocators.phone_number_input_message)
+            elif  input_name == "Email":
+                element = self.driver.find_element(*NewCustomerLocators.email_input_message)
             elif  input_name == "Address":
                 pass
             #TODO: needs to implement message on address
