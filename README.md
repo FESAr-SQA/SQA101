@@ -1,6 +1,6 @@
 # SQA101 - Software Quality Assurance 101
 
-Welcome to the SQA101 repository! This resource is designed for Software Quality Assurance beginners, offering a foundation in testing using pytest and Selenium. Follow the instructions below to get started.
+Welcome to the SQA101 repository! This resource is designed for Software Quality Assurance beginners, offering a foundation in testing using pytest and Selenium. Follow the instructions below to get started. If you have any questions, please reach out to intructor.
 
 ## Clone the Repository
 
