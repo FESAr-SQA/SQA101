@@ -11,7 +11,7 @@
       "module": "pytest",
       "args": [
         "-k",
-        "test_metod_name",
+        "test_BSA_1_GLA",
         "--log-cli-level=INFO",
         "--pdb"
       ],
