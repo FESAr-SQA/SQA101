@@ -19,6 +19,7 @@ class HomeLocators:
 class NewCustomerLocators:
     customer_name_txt = (By.NAME, "name")
     customer_input_message = (By.ID, "message")
+    date_birth_txt = (By.NAME, "dob")
     address_txt = (By.NAME, "addr")
     city_name_txt = (By.NAME, "city")
     city_input_message = (By.ID, "message4")
@@ -30,3 +31,23 @@ class NewCustomerLocators:
     phone_number_input_message = (By.ID, "message7")
     email_name_txt = (By.NAME, "emailid")
     email_input_message = (By.ID, "message9")
+    password_name_txt = (By.NAME, "password")
+    submit_button = (By.NAME, "sub")
+    id_customer_reg_msg = (By.XPATH, '//*[@id="customer"]/tbody/tr[4]/td[2]')
+
+class EditCustomerLoginLocators:
+    customer_id_input = (By.NAME, "cusid")
+    # * LogIn button to edit
+    submit_button = (By.NAME, "AccSubmit")
+
+class EditCustomerLocators:
+    customer_name_value = (By.NAME, "name")
+    gender_value = (By.NAME, "gender")
+    birthdate = (By.NAME, "dob")
+    address_value = (By.NAME, "addr")
+    city_value = (By.NAME, "city")
+    state_value = (By.NAME, "state")
+    # pin_value = (By.NAME, "pinno")
+    pin_value = (By.CSS_SELECTOR, 'body > table > tbody > tr > td > table > tbody > tr:nth-child(10) > td:nth-child(2) > input[type=text]')
+    mobile_value = (By.NAME, "telephoneno")
+    email_value = (By.NAME, "emailid")
