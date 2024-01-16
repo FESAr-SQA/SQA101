@@ -60,7 +60,7 @@ class TestNewCustomer:
         time.sleep(1)
         newCustomer.write_phone("5")
         time.sleep(1)
-        newCustomer.write_email("planosd@aol.com")
+        newCustomer.write_email()
         time.sleep(1)
         newCustomer.write_password("YjAnEtU")
         time.sleep(1)

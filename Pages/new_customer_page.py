@@ -1,3 +1,5 @@
+import random
+import string
 from Base.page_base import PageBase
 from Locators.locators import NewCustomerLocators
 # from selenium.webdriver.common.by import By
@@ -111,9 +113,15 @@ class NewCustomerPage(PageBase):
         except Exception as e:
             print(e)
 
-    def write_email(self, email: str) -> None:
+    def write_email(self) -> None:
+
+        length = 5
+        letters = string.ascii_lowercase
+        result_str = ''.join(random.choice(letters) for _ in range(length))
+        result_str += '@aol.com'
+
         try:
-            self.driver.find_element(*NewCustomerLocators.email_name_txt).send_keys(email)
+            self.driver.find_element(*NewCustomerLocators.email_name_txt).send_keys(result_str)
         except Exception as e:
             print(e)
 

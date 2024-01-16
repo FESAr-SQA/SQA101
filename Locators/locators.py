@@ -47,7 +47,6 @@ class EditCustomerLocators:
     address_value = (By.NAME, "addr")
     city_value = (By.NAME, "city")
     state_value = (By.NAME, "state")
-    # pin_value = (By.NAME, "pinno")
-    pin_value = (By.CSS_SELECTOR, 'body > table > tbody > tr > td > table > tbody > tr:nth-child(10) > td:nth-child(2) > input[type=text]')
+    pin_value = (By.NAME, "pinno")
     mobile_value = (By.NAME, "telephoneno")
     email_value = (By.NAME, "emailid")
