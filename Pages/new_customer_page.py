@@ -75,15 +75,22 @@ class NewCustomerPage(PageBase):
             self.driver.find_element(*NewCustomerLocators.customer_name_txt).send_keys(customer)
         except Exception as e:
             print(e)
+    
+    def write_gender(self) -> None:
+        try:
+            self.driver.find_element(*NewCustomerLocators.gender_name).click()
+        except Exception as e:
+            print(e)
 
-    def write_date_of_birth(self, date):
+
+    def write_date_of_birth(self, date: str):
         try:
             self.driver.find_element(*NewCustomerLocators.date_birth_txt).send_keys(date)
         except Exception as e:
             print("Cannot write date")
             print(e)
 
-    def write_address(self, address):
+    def write_address(self, address: str):
         try:
             self.driver.find_element(*NewCustomerLocators.address_txt).send_keys(address)
         except Exception as e:
@@ -113,8 +120,8 @@ class NewCustomerPage(PageBase):
         except Exception as e:
             print(e)
 
-    def write_email(self) -> None:
-
+    def write_email(self) -> str:
+        '''This method returns the random email as soon as it sends to the required field'''
         length = 5
         letters = string.ascii_lowercase
         result_str = ''.join(random.choice(letters) for _ in range(length))
@@ -122,6 +129,7 @@ class NewCustomerPage(PageBase):
 
         try:
             self.driver.find_element(*NewCustomerLocators.email_name_txt).send_keys(result_str)
+            return result_str
         except Exception as e:
             print(e)
 

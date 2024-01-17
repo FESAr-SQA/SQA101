@@ -19,6 +19,7 @@ class HomeLocators:
 class NewCustomerLocators:
     customer_name_txt = (By.NAME, "name")
     customer_input_message = (By.ID, "message")
+    gender_name = (By.XPATH, "/html/body/table/tbody/tr/td/table/tbody/tr[5]/td[2]/input[{}]".format(1))
     date_birth_txt = (By.NAME, "dob")
     address_txt = (By.NAME, "addr")
     city_name_txt = (By.NAME, "city")
