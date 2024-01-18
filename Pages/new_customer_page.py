@@ -193,11 +193,7 @@ class NewCustomerPage(PageBase):
                 element = self.driver.find_element(*NewCustomerLocators.customer_address_input)
         except Exception as e: 
                 pass
-    def verify_message_by_input_name(self, input_name, expected_message):
-        pass
         
-
-
     def getID(self) -> str:
         try:
             element = self.driver.find_element(*NewCustomerLocators.id_customer_reg_msg)
