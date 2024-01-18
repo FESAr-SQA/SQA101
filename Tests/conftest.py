@@ -7,7 +7,7 @@ from Utils.driver_factory import DriverFactory
 CONFIG_PATH = "config.json"
 DEFAULT_WAIT_TIME = 10
 SUPPORTED_BROWSERS = ["chrome","firefox", "edge"]
-BASE_URL = "https://demo.guru99.com/V1/index.php"
+BASE_URL = "https://demo.guru99.com/V4/index.php"
 
 
 @pytest.fixture(scope="session")
