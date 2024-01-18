@@ -12,6 +12,7 @@ class DriverFactory:
         if config["browser"] == "chrome":
             options = webdriver.ChromeOptions()
             options.add_argument("start-maximized")
+            options.add_argument('--ignore-certificate-errors')
             options.add_extension("Extensions//chrome_extensions//ublock.crx")
             if config["headless_mode"] is True:
                 options.add_argument("--headless")
