@@ -1,4 +1,4 @@
-from Pages.edit_customer import EditCustomerPage
+from Pages.edit_customer_page import EditCustomerPage
 from Pages.login_page import LoginPage
 from Pages.common_page import CommonPage
 from Pages.new_customer_page import NewCustomerPage

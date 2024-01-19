@@ -1,6 +1,6 @@
 import time
 import pytest
-from Pages.fund_transfer import FundTranser
+from Pages.fund_transfer_page import FundTranser
 from Pages.common_page import CommonPage
 from Pages.login_page import LoginPage
 
@@ -30,3 +30,12 @@ class TestFundTranser:
         fund_transfer.verify_data_by_field("To", "131295")
         fund_transfer.verify_data_by_field("Amount", "500")
         fund_transfer.verify_data_by_field("Description", "nonas")
+
+        time.sleep(3)
+        common.click_on_button_menu("Fund Transfer")
+        fund_transfer.write_payers_account("131295")
+        fund_transfer.write_payees_account("131294")
+        fund_transfer.write_amount("500")
+        fund_transfer.write_description("nonas")
+        fund_transfer.click_on_submit()
+        time.sleep(3)
