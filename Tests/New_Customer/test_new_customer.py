@@ -4,7 +4,6 @@ from Pages.common_page import CommonPage
 from Pages.new_customer_page import NewCustomerPage
 import pytest
 import time
-from Pages.edit_customer import EditCustomerPage
 
 
 @pytest.mark.usefixtures("setup")

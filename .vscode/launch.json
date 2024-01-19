@@ -11,8 +11,8 @@
       "module": "pytest",
       "args": [
         "-k",
-        "test_BSA_1_GLA",
-        "--log-cli-level=INFO",
+        "test_login_negative",
+        "--log-cli-level=DEBUG",
         "--pdb"
       ],
       "console": "integratedTerminal",

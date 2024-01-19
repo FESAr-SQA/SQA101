@@ -34,10 +34,11 @@ class WebDriverListener(AbstractEventListener):
             self.logger.info(f"Clicking on {element.get_attribute('text')}")
 
     def after_click(self, element, driver):
-        if element.get_attribute("text") is None:
-            self.logger.info(f"{element.get_attribute('class')} clicked")
-        else:
-            self.logger.info(f"{element.get_attribute('text')} clicked")
+        self.logger.info(f"Clicked")
+        # if element.get_attribute("text") is None:
+        #     self.logger.info(f"{element.get_attribute('class')} clicked")
+        # else:
+        #     self.logger.info(f"{element.get_attribute('text')} clicked")
 
     def before_change_value_of(self, element, driver):
         self.logger.info(f"{element.get_attribute('text')} value changed")
