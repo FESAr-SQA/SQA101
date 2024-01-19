@@ -1,10 +1,9 @@
-from Pages.edit_customer_page import EditCustomerPage
+from Pages.edit_customer import EditCustomerPage
 from Pages.login_page import LoginPage
 from Pages.common_page import CommonPage
 from Pages.new_customer_page import NewCustomerPage
 import pytest
 import time
-from Pages.edit_customer import EditCustomerPage
 
 
 @pytest.mark.usefixtures("setup")
@@ -92,7 +91,7 @@ class TestNewCustomer:
 
         addCustomer = NewCustomerPage(self.driver)
         time.sleep(2)
-        addCustomer.write_on_input("Customer Name","Holmes")
+        addCustomer.write_customer_name("Holmes")
         addCustomer.write_on_input("Gender","de mujerst")
         addCustomer.write_on_input("Date birth","01032002")
         addCustomer.write_on_input("Address", "Calle Bosques de Mexico 32")
@@ -105,8 +104,6 @@ class TestNewCustomer:
         addCustomer.click_on_submit()
         id_data = addCustomer.getID()
         time.sleep(3)
-        id_data = addCustomer.getID()
-        time.sleep(1)
         common.click_on_button_menu("Edit Customer")
         time.sleep(2)
 
@@ -122,3 +119,4 @@ class TestNewCustomer:
         editCustomer.verify_data_by_field("State","CDMX")
         editCustomer.verify_data_by_field("Pin","548320")
         editCustomer.verify_data_by_field("Phone","5599345690")
+        editCustomer.verify_data_by_field("Email", email)
