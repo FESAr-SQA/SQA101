@@ -43,7 +43,6 @@ def setup(request, config):
     time.sleep(2.5)
     yield
     if request.session.testsfailed != before_failed:
-        pass
-        # tomar captura de pantalla
+        driver.get_screenshot_as_file("screenshot.png")
     
     driver.quit()
