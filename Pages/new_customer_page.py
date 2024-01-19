@@ -3,6 +3,7 @@ import string
 from selenium.webdriver.common.by import By
 from Base.page_base import PageBase
 from Locators.locators import NewCustomerLocators
+from selenium.webdriver.common.by import By
 
 
 class NewCustomerPage(PageBase):

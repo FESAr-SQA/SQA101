@@ -2,6 +2,9 @@ from Pages.login_page import LoginPage
 from Pages.home_page import HomePage
 import pytest
 import time
+from selenium.webdriver.common.alert import Alert
+from Pages.common_page import CommonPage
+
 
 @pytest.mark.usefixtures("setup")
 class TestLogin:
@@ -30,3 +33,12 @@ class TestLogin:
     #                         )
     # def test_sums(self, number_1, number_2, expected_result):
     #     assert number_1 + number_2 == expected_result
+    def test_BSA_37(self):
+        login = LoginPage(self.driver)
+        login.open()
+        login.write_username("username")
+        login.write_password("password")
+        login.click_on_login()
+        alert = CommonPage(self.driver)
+        alert.verify_alert_message("User or Password is not valid")
+    
