@@ -62,6 +62,15 @@ class EditCustomerLocators:
     pin_value = (By.NAME, "pinno")
     mobile_value = (By.NAME, "telephoneno")
     email_value = (By.NAME, "emailid")
-   
 
-    
+class FundTransferLocators:
+    payers_account_input = (By.NAME, "payersaccount")
+    payers_account_input2 = (By.NAME, "payeeaccount")
+    amount_input = (By.NAME, "ammount")
+    description_input = (By.NAME, "desc")
+    submit_button = (By.NAME, "AccSubmit")
+    # * From now on these are the locators for the filled fields
+    payers_account_field = (By.XPATH, "/html/body/table/tbody/tr[2]/td/table/tbody/tr[1]/td[2]")
+    payees_account_field = (By.XPATH, "/html/body/table/tbody/tr[2]/td/table/tbody/tr[2]/td[2]")
+    amount_field = (By.XPATH, "/html/body/table/tbody/tr[2]/td/table/tbody/tr[3]/td[2]")
+    description_field = (By.XPATH, "/html/body/table/tbody/tr[2]/td/table/tbody/tr[4]/td[2]")
