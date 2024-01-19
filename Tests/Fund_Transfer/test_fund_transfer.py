@@ -17,6 +17,7 @@ class TestFundTranser:
         time.sleep(2)
         common = CommonPage(self.driver)
         common.click_on_button_menu("Fund Transfer")
+        time.sleep(3)
 
         fund_transfer = FundTranser(self.driver)
         fund_transfer.write_payers_account("131294")
