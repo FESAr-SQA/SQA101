@@ -3,8 +3,6 @@ from Base.page_base import PageBase
 from Locators.locators import CommonLocators
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 
 class CommonPage(PageBase):
     def __init__(self, driver):

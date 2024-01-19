@@ -80,3 +80,4 @@ class ChangePasswordLocators:
     new_password_input = (By.NAME, "newpassword")
     confirm_password_input = (By.NAME, "confirmpassword")
     submit_button = (By.NAME, "sub")
+    manager_id_data = (By.XPATH, "/html/body/table/tbody/tr/td/table/tbody/tr[3]/td")

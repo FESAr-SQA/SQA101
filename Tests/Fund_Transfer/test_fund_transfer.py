@@ -12,7 +12,7 @@ class TestFundTranser:
         login = LoginPage(self.driver)
         login.open()
         login.write_username("mngr547360")
-        login.write_password("YjAnEtU")
+        login.write_password("Qwerty@1")
         login.click_on_login()
         time.sleep(2)
         common = CommonPage(self.driver)
