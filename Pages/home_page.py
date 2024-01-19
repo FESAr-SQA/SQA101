@@ -1,6 +1,5 @@
 from Base.page_base import PageBase
 from Locators.locators import HomeLocators
-import time
 
 class HomePage(PageBase):
     def __init__(self, driver):

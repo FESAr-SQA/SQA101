@@ -1,5 +1,6 @@
 import random
 import string
+from selenium.webdriver.common.by import By
 from Base.page_base import PageBase
 from Locators.locators import NewCustomerLocators
 
@@ -166,52 +167,3 @@ class NewCustomerPage(PageBase):
                 self.driver.find_element(*NewCustomerLocators.password_name_txt).send_keys(info_data)
         except Exception as e:
             print(e)
-
-    def click_on_submit(self):
-        try:
-            self.driver.find_element(*NewCustomerLocators.submit_button).click()
-        except Exception as e:
-            print(e)
-
-    def verify_message_by_input_name(self, input_name, expected_message):
-        try:
-            element = ""
-            actual_message = ""
-            if input_name == "Customer Name":
-                element = self.driver.find_element(*NewCustomerLocators.customer_input_message)
-            elif  input_name == "City":
-                element = self.driver.find_element(*NewCustomerLocators.city_input_message)
-            elif  input_name == "State":
-                element = self.driver.find_element(*NewCustomerLocators.state_input_message)
-            elif  input_name == "PIN":
-                element = self.driver.find_element(*NewCustomerLocators.pin_input_message)
-            elif  input_name == "Phone_number":
-                element = self.driver.find_element(*NewCustomerLocators.phone_number_input_message)
-            elif  input_name == "Email":
-                element = self.driver.find_element(*NewCustomerLocators.email_input_message)
-            elif  input_name == "Address":
-                element = self.driver.find_element(*NewCustomerLocators.customer_address_input)
-        except Exception as e: 
-                pass
-        
-    def getID(self) -> str:
-        try:
-            element = self.driver.find_element(*NewCustomerLocators.id_customer_reg_msg)
-            return element.text
-        except Exception as e:
-            return e
-
-    def write_email(self) -> str:
-
-        length = 5
-        letters = string.ascii_lowercase
-        result_str = ''.join(random.choice(letters) for _ in range(length))
-        result_str += '@gogogomail.com'
-
-        try:
-            self.driver.find_element(*NewCustomerLocators.email_name_txt).send_keys(result_str)
-            return result_str
-        except Exception as e:
-            print(e)
-            
-        
