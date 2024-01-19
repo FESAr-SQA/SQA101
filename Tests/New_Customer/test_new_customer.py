@@ -91,7 +91,7 @@ class TestNewCustomer:
 
         addCustomer = NewCustomerPage(self.driver)
         time.sleep(2)
-        addCustomer.write_customer_name("Holmes")
+        addCustomer.write_on_input("Customer Name", "Holmes")
         addCustomer.write_on_input("Gender","de mujerst")
         addCustomer.write_on_input("Date birth","01032002")
         addCustomer.write_on_input("Address", "Calle Bosques de Mexico 32")
