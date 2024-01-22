@@ -2,7 +2,6 @@ from Pages.login_page import LoginPage
 from Pages.home_page import HomePage
 import pytest
 import time
-from selenium.webdriver.common.alert import Alert
 from Pages.common_page import CommonPage
 
 
@@ -14,7 +13,7 @@ class TestLogin:
         login = LoginPage(self.driver)
         login.open()
         login.write_username("mngr547360")
-        login.write_password("YjAnEtU")
+        login.write_password("Qwerty@1")
         login.click_on_login()
         time.sleep(2)
         home = HomePage(self.driver)

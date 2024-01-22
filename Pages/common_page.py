@@ -15,7 +15,6 @@ class CommonPage(PageBase):
             self.driver.find_element(*locator).click()
         except Exception as e:
             print(e)
-
     def verify_alert_message(self, expected_message):
         WebDriverWait(self.driver,timeout=5).until(EC.alert_is_present())
         alert = self.driver.switch_to.alert

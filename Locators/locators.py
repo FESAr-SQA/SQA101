@@ -74,3 +74,10 @@ class FundTransferLocators:
     payees_account_field = (By.XPATH, "/html/body/table/tbody/tr[2]/td/table/tbody/tr[2]/td[2]")
     amount_field = (By.XPATH, "/html/body/table/tbody/tr[2]/td/table/tbody/tr[3]/td[2]")
     description_field = (By.XPATH, "/html/body/table/tbody/tr[2]/td/table/tbody/tr[4]/td[2]")
+
+class ChangePasswordLocators:
+    old_password_input = (By.NAME, "oldpassword")
+    new_password_input = (By.NAME, "newpassword")
+    confirm_password_input = (By.NAME, "confirmpassword")
+    submit_button = (By.NAME, "sub")
+    manager_id_data = (By.XPATH, "/html/body/table/tbody/tr/td/table/tbody/tr[3]/td")

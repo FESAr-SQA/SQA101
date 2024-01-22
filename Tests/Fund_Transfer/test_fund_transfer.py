@@ -1,6 +1,6 @@
 import time
 import pytest
-from Pages.fund_transfer_page import FundTranser
+from Pages.fund_transfer_page import FundTransferPage
 from Pages.common_page import CommonPage
 from Pages.login_page import LoginPage
 
@@ -12,14 +12,14 @@ class TestFundTranser:
         login = LoginPage(self.driver)
         login.open()
         login.write_username("mngr547360")
-        login.write_password("YjAnEtU")
+        login.write_password("Qwerty@1")
         login.click_on_login()
         time.sleep(2)
         common = CommonPage(self.driver)
         common.click_on_button_menu("Fund Transfer")
         time.sleep(3)
 
-        fund_transfer = FundTranser(self.driver)
+        fund_transfer = FundTransferPage(self.driver)
         fund_transfer.write_payers_account("131294")
         fund_transfer.write_payees_account("131295")
         fund_transfer.write_amount("500")
